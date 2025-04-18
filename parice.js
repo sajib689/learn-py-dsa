@@ -13,9 +13,11 @@ const HouseRent2 = function (amount) {
     this.amount = amount;
 }
 HouseRent2.prototype.incrementYearly = function () {
-    this.amount += 1000;
-    return `In this month, you will pay ${this.amount} for 12 months. Total rent is ${this.amount * 12}`;
+    this.amount += 499;
+    return `Next year, you will pay ${this.amount} for rent.`;
 }
-const myHouse = new HouseRent2(1000);
+const myHouse = new HouseRent2(500);
 
+console.log(myHouse.incrementYearly());
+console.log(myHouse.incrementYearly());
 console.log(myHouse.incrementYearly());
