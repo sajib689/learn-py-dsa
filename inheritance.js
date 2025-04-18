@@ -19,27 +19,24 @@
 
 class Computer {
     constructor(name, model, warenty) {
+        super(name, model, warenty);
         this.name = name;
         this.model = model;
         this.warenty = warenty;
     }
+    
 }
-
 class Laptop extends Computer {
     constructor(name, model, warenty, batteryLife) {
-        super(name, model, warenty); // ✅ This is correct
+        super(name, model, warenty); 
         this.batteryLife = batteryLife;
     }
-    useComputer(value) {
-        return `Warenty avilable: ${(this.warenty * 12) - value} months`;
-    }
+    
     getDetails() {
         return `Name: ${this.name}, Model: ${this.model}, Warenty: ${this.warenty}, Battery Life: ${this.batteryLife}`;
     }
 }
-
-let dell = new Laptop('Dell', 'Inspiron', 2, '10 hours');
+let dell = new Laptop('Dell', 'Inspiron', '2 years', '10 hours');
 let hp = new Laptop('HP', 'Pavilion', '1 year', '8 hours');
-
-console.log(dell.useComputer(6));
-// console.log(hp.getDetails());
+console.log(dell.getDetails());
+console.log(hp.getDetails());
