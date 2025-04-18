@@ -13,3 +13,13 @@ Array.prototype.filter = function () {
     return arr
 }
 console.log([2, 4, 8 , 1, 11, 12].filter())
+
+Array.prototype.concat = function () {
+    let arr = []
+    for (i =0; i < this.length; i++) {
+       arr.push(this[i] + 'kodu')
+
+    }
+    return arr
+}
+console.log([2, 4, 8 , 1, 11, 12].concat())
