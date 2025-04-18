@@ -4,8 +4,15 @@ const HouseRent = function (rent, months) {
 }
 
 HouseRent.prototype.calculateTotalRent = function () {
-  return `In this month, you will pay ${this.rent} for ${this.months} months. Total rent is ${this.rent * this.months} after 12 months of rent increment ${this.month * 500}`;
+  return `In this month, you will pay ${this.rent} for ${this.months} months. Total rent is ${this.rent * this.months}`;
 }
 
 console.log(new HouseRent(1000, 12).calculateTotalRent()) // 12000
 
+const HouseRent2 = function (amount) {
+    this.amount = amount;
+}
+
+const myHouse = new HouseRent2(1000);
+
+console.log(myHouse);
